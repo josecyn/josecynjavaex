@@ -1,1 +1,1 @@
-web:    java -cp target/classes:target/dependency/* com.cloudcontrolled.sample.jetty.App
+web:    java -cp target/classes:target/dependency/* com.jose.test.alexa.App

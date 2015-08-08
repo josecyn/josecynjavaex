@@ -37,15 +37,15 @@ public class App
 	
     public static void main(String[] args) throws Exception
     {
-        //Integer serverPort = Integer.valueOf(System.getenv("PORT"));
-    	Integer serverPort = Integer.valueOf(PORT);
+        Integer serverPort = Integer.valueOf(System.getenv("PORT"));
+    	//Integer serverPort = Integer.valueOf(PORT);
     	    	
         Server server = new Server(serverPort);
 
-        SslConnectionFactory sslConnectionFactory = new SslConnectionFactory();
+        /*SslConnectionFactory sslConnectionFactory = new SslConnectionFactory();
         SslContextFactory sslContextFactory = sslConnectionFactory.getSslContextFactory();
-        sslContextFactory.setKeyStorePath(keyStore);
-        sslContextFactory.setKeyStorePassword(keyStorePassword);
+        //sslContextFactory.setKeyStorePath(keyStore);
+        //sslContextFactory.setKeyStorePassword(keyStorePassword);
         sslContextFactory.setIncludeCipherSuites(Sdk.SUPPORTED_CIPHER_SUITES);
 
         HttpConfiguration httpConf = new HttpConfiguration();
@@ -58,7 +58,7 @@ public class App
                 new ServerConnector(server, sslConnectionFactory, httpConnectionFactory);
         serverConnector.setPort(PORT);
         server.setConnectors(new Connector[] { serverConnector
-        });
+        });*/
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
